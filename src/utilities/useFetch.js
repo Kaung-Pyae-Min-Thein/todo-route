@@ -6,17 +6,22 @@ export const useFetch = (url) => {
   const [error, setError] = useState(null);
   const [pending, setPending] = useState(true);
 
-  const abortControl = new AbortController();
+
 
 
   useEffect(() => {
+
+    const abortControl = new AbortController();
+
     fetch(url, { signal: abortControl.signal })
+
       .then(response => {
         if (!response.ok) {
           throw Error("Can't get data from Server")
         }
         return response.json()
       })
+
       .then(data => {
         setData(data);
         setPending(false);
@@ -32,9 +37,9 @@ export const useFetch = (url) => {
 
       })
 
-    return () => abortControl.abort()
+    return () => abortControl.abort();
   }, [url]);
 
-  return { data, error, pending };
+  return { data, error, pending }
 
 }
