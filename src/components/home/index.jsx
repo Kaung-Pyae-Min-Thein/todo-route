@@ -1,3 +1,5 @@
+import { HomeStyles } from "./homeStyles";
+
 export const Home = () => {
-  return <div> </div>;
+  return <HomeStyles></HomeStyles>;
 };
