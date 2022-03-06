@@ -25,8 +25,8 @@ export const AddTodo = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(todo),
     }).then(() => {
-      history.push("/");
       setPending(false);
+      history.push("/");
     });
   };
 
