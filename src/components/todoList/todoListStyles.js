@@ -1,3 +1,3 @@
 import styled from "styled-components";
 
-export const AddStyles = styled.form``
+export const TodoListStyle = styled.div``

@@ -1,7 +1,7 @@
 import { Route } from "react-router-dom";
 import { Switch } from "react-router-dom";
 import "./App.css";
-import { Home, Navbar, AddTodo, Todo, Error } from "./components"
+import { Home, Navbar, AddTodo, TodoDetail, Error } from "./components"
 
 
 function App() {
@@ -17,8 +17,8 @@ function App() {
         <AddTodo />
       </Route>
 
-      <Route path='/add/:id'>
-        <Todo />
+      <Route path='/todo/:id'>
+        <TodoDetail />
       </Route>
 
       <Route path='*'>

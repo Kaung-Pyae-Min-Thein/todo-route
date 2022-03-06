@@ -1,5 +1,6 @@
 import { HomeStyles } from "./homeStyles";
 import { useFetch } from "../../utilities/useFetch";
+import { TodoList } from "../todoList";
 
 export const Home = () => {
   const {
@@ -12,7 +13,7 @@ export const Home = () => {
     <HomeStyles>
       {error && <div>{error}</div>}
       {pending && <div>{pending}</div>}
-      {todos && todos.map((todo, index) => <h2 key={index}>{todo.name}</h2>)}
+      {todos && <TodoList todos={todos} />}
     </HomeStyles>
   );
 };

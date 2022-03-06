@@ -1,5 +1,6 @@
 export { Navbar } from "./navbar";
 export { Home } from "./home";
-export { Todo } from "./todo";
+export { TodoDetail } from "./todoDetail";
 export { AddTodo } from "./addTodo";
 export { Error } from "./error"
+export { TodoList } from "./todoList";
